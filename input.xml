@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<data>
+	<system>
+		<name>de2o</name>
+		<zoneid>cn-hongkong-b</zoneid>		
+		<regionid>cn-hongkong</regionid>
+		<ssh_key_name>test_key_pair</ssh_key_name>
+	</system>
+	<vpc>
+		<name>de2o_vpc</name>
+		<cidr>10.10.0.0/16</cidr>
+		<regionid>cn-hongkong</regionid>		
+	</vpc>
+	<vswitch>
+		<name>de2o_vswitch</name>
+		<cidr>10.10.0.0/24</cidr>
+	</vswitch>
+	<security_group>
+		<name>de2o_security</name>
+		<description>security group</description>
+		<rule>
+			<regionid>cn-hongkong</regionid>
+			<IpProtocol>tcp</IpProtocol>
+			<PortRange>22/22</PortRange>
+			<SourceCidrIp>0.0.0.0/0</SourceCidrIp>
+		</rule>
+		<rule>
+			<IpProtocol>tcp</IpProtocol>
+			<PortRange>80/80</PortRange>
+			<SourceCidrIp>0.0.0.0/0</SourceCidrIp>
+		</rule>
+		<rule>
+			<regionid>cn-hongkong</regionid>
+			<IpProtocol>tcp</IpProtocol>
+			<PortRange>8080/8080</PortRange>
+			<SourceCidrIp>0.0.0.0/0</SourceCidrIp>
+		</rule>
+	</security_group>
+	<instance>
+		<instance_node_name>de2o_1</instance_node_name>
+		<node_password>1q2w3e4r!</node_password>
+		<instance_Image>centos7u2_64_40G_cloudinit_20160520.raw</instance_Image>
+		<instance_Size>ecs.n1.tiny</instance_Size>
+		<instance_Description>ECS Instance Description</instance_Description>
+		<HostName>host1</HostName>
+		<InternetChargeType>PayByTraffic</InternetChargeType>
+		<Max_Bandwidth_out>100</Max_Bandwidth_out>
+		<Max_Bandwidth_in>100</Max_Bandwidth_in>		
+		<instance_vswitch_name>de2o_vswitch</instance_vswitch_name>
+	</instance>
+	<instance>
+		<instance_node_name>de2o_2</instance_node_name>
+		<node_password>1q2w3e4r!</node_password>
+		<instance_Image>centos7u2_64_40G_cloudinit_20160520.raw</instance_Image>
+		<instance_Size>ecs.n1.tiny</instance_Size>
+		<instance_Description>ECS Instance Description</instance_Description>
+		<HostName>host2</HostName>
+		<InternetChargeType>PayByTraffic</InternetChargeType>
+		<Max_Bandwidth_out>100</Max_Bandwidth_out>
+		<Max_Bandwidth_in>100</Max_Bandwidth_in>		
+		<instance_vswitch_name>de2o_vswitch</instance_vswitch_name>
+	</instance>
+	<instance>
+		<instance_node_name>de2o_3</instance_node_name>
+		<node_password>1q2w3e4r!</node_password>
+		<instance_Image>centos7u2_64_40G_cloudinit_20160520.raw</instance_Image>
+		<instance_Size>ecs.n1.tiny</instance_Size>
+		<instance_Description>ECS Instance Description</instance_Description>
+		<HostName>host3</HostName>
+		<InternetChargeType>PayByTraffic</InternetChargeType>
+		<Max_Bandwidth_out>100</Max_Bandwidth_out>
+		<Max_Bandwidth_in>100</Max_Bandwidth_in>		
+		<instance_vswitch_name>de2o_vswitch</instance_vswitch_name>
+	</instance>
+	<instance>
+		<instance_node_name>de2o_4</instance_node_name>
+		<node_password>1q2w3e4r!</node_password>
+		<instance_Image>centos7u2_64_40G_cloudinit_20160520.raw</instance_Image>
+		<instance_Size>ecs.n1.tiny</instance_Size>
+		<instance_Description>ECS Instance Description</instance_Description>
+		<HostName>host4</HostName>
+		<InternetChargeType>PayByTraffic</InternetChargeType>
+		<Max_Bandwidth_out>100</Max_Bandwidth_out>
+		<Max_Bandwidth_in>100</Max_Bandwidth_in>		
+		<instance_vswitch_name>de2o_vswitch</instance_vswitch_name>
+	</instance>
+	<saltstack>
+		<master_ip>52.78.62.216</master_ip>
+	</saltstack>
+</data>
+	 
