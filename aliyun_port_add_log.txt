@@ -1,0 +1,27 @@
+ult = driver.ex_list_security_group(driver.__dict__['region'])
+>>> result2 = findall(result,'SecurityGroups/SecurityGroup/SecurityGroupId')
+>>> result2
+[<Element 'SecurityGroupId' at 0x7f23f50a2710>]
+>>> result = driver.ex_list_security_group(driver.__dict__['region'])
+>>>
+>>>
+>>>
+>>> result2 = findall(result,'SecurityGroups/SecurityGroup/SecurityGroupId')
+>>> result2[0].__dict__
+{'text': 'sg-t4n1yajhh9du5jhk7md7', 'attrib': {}, 'tag': 'SecurityGroupId', '_children': []}
+>>> driver.__dict__['region']
+'ap-southeast-1'
+>>> IpProtocol = 'tcp'
+>>> PortRange='80/80'
+>>> SourceCidrIp = '0.0.0.0/0'
+>>> SecurityGroupId = result2[0].__dict__['text']
+>>> SecurityGroupId
+'sg-t4n1yajhh9du5jhk7md7'
+>>> RegionId = driver.__dict__['region']
+>>> result = driver.ex_authorize_security_group(SecurityGroupId, RegionId, IpProtocol, PortRange, SourceCidrIp)
+>>> result
+<Element 'AuthorizeSecurityGroupResponse' at 0x7f23f50a2f50>
+>>> PortRange='8080/8080'
+>>> result = driver.ex_authorize_security_group(SecurityGroupId, RegionId, IpProtocol, PortRange, SourceCidrIp)
+>>>
+
